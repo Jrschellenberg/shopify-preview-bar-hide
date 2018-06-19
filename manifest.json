@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Shopify - Preview Bar hider",
+  "description": "This extension will find and hide shopify preview bar if it exists",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts" : [
+    {
+      "js": ["jquery.js", "inject.js"],
+      "matches": ["*://*/*"]
+    }
+  ],
+  "permissions": [
+    "activeTab", "http://*/*", "https://*/*"
+  ]
+}
